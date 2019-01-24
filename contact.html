@@ -36,37 +36,46 @@
       </ul>
     </nav>
 
-    <!-- body section -->
-
     <!-- map section  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div id="googleMap" style="width:100%;height:800px;"></div>
 
-    <div id="googleMap" style="width:40%;height:800px;"></div>
+          <div id="map"></div>
 
-    <div id="map"></div>
+          <script>
+            function myMap() {
+              var mapProp = {
+                center: new google.maps.LatLng(33.1959, -117.3795),
+                zoom: 13
+              };
 
-    <script>
-      function myMap() {
-        var mapProp = {
-          center: new google.maps.LatLng(33.1959, -117.3795),
-          zoom: 13
-        };
+              map = new google.maps.Map(
+                document.getElementById("googleMap"),
+                mapProp
+              );
+            }
+          </script>
+        </div>
 
-        map = new google.maps.Map(
-          document.getElementById("googleMap"),
-          mapProp
-        );
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDrbDbmKvV--aXzByi0KA2UnJgs6t2qeg&callback=myMap"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDrbDbmKvV--aXzByi0KA2UnJgs6t2qeg&callback=myMap"></script>
 
-    <!-- contaact email section  -->
+        <div class="col-md-7">
+          <h1>contact info</h1>
+          <h1>enter address</h1>
+          <h1>Enter email info</h1>
+          <h1>Enter phone number</h1>
+        </div>
+      </div>
+    </div>
 
     <!-- footer section -->
 
     <footer id="main-footer" class="bg-dark">
       <div class="container">
         <div class="row">
-          <div class="col text-center text-light py-4">
+          <div class="col text-center text-light py-2">
             <p>Copyright &copy; <span id="year"> 2018</span></p>
           </div>
         </div>
